@@ -92,7 +92,7 @@ main () {
             exit 1
         fi
 
-        for xway in ${xways}; do
+        for xway in "${xways}"; do
             if echo "${xway}" | grep -E "^${xtty}" > /dev/null ; then
                 xdisplay="$(echo "${xway}" | awk '{print $4}')"
                 break
